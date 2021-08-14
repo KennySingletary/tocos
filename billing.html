@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tacos By Roscoe is not a real restaurant, as far as I know. This is a demo on accessible forms.">
+    <title>Tacos By Roscoe | Billing Information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- add FontAwesome here -->
+  <script src="https://kit.fontawesome.com/c8e54b29c8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <div class="container">
+                <img src="images/taco-emoji.png" alt="Tacos By Roscoe taco emoji logo" id="logo-img">
+                <span id="logo-text">Tacos By Roscoe</span>
+            </div>
+        </div>
+        <nav class="container">
+            <ul class="nav-flex">
+                <li><a href="index.html">Delivery</a></li>
+                <li><a href="billing.html">Billing</a></li>
+                <li><a href="review.html">Review</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div id="summary">
+                <i class="fas fa-utensils fa-3x"></i>
+                <div id="summary-text">
+                    <p>Delivery by 7pm, April 13, 2020</p>
+                    <p>6 items, <span class="check"></span> $31.44</p>
+                </div>
+            </div>
+
+            <!-- form goes here. -->
+          <form>
+            <fieldset>
+              <legend>Payment Method Information</legend>
+              <p class="hint">* - required field</p>
+              <label for="card_name">Name on Card*</label>
+              <input type="text" id="card_name" name="user_card_name">
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="ccnum">Credit card number *</label>
+              <input type="text" id="ccnum" name="cardnumber">
+              <p class="hint">1111-2222-3333-4444</p>
+              <label for="month">Exp Month *</label>
+              <input type="exp_month" id="expmonth" name="user_card_month">
+              <p class="hint">Example: September</p>
+              <label for="expyear">Exp Year *</label>
+              <input type="text" id="expyear" name="expyear">
+              <p class="hint">Example: 1934</p>
+              <label for="cvv">CVV *</label>
+              <input type="text" id="cvv" name="cvv">
+              <p class="hint">Example: 352</p>
+              <label for="address1">Billing Address *</label>
+              <input type="text" id="billing_address" name="user_billing_address">
+              <label for="address2">Apartment/Office Number</label>
+              <input type="text" id="address2" name="user_address2">
+              <label for="zip">Zip Code *</label>
+              <input type="text" id="zip" name="user_zip">
+              <p class="hint">City and State will be looked up from Zip Code</p>
+              <label>
+
+  <!-- TODO: Enter form for when user shipping is diffrent the billing address. -->
+
+              <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+              </label>
+
+
+              <button type="submit">Continue to Checkout</button>
+            </fieldset>
+          </form>
+
+        </div>
+    </main>
+</body>
+</html>
